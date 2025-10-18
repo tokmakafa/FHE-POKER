@@ -1,0 +1,24 @@
+{
+  "short_name": "FHE Poker",
+  "name": "FHE Poker - Private Blockchain Gaming",
+  "description": "Play poker with fully encrypted cards using FHE technology on Ethereum",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#8b5cf6",
+  "background_color": "#0f172a",
+  "orientation": "portrait-primary"
+}
+

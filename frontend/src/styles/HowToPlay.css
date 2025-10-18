@@ -1,0 +1,320 @@
+/* How to Play Page */
+.how-to-play-page, .about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+}
+
+.guide-section {
+  margin-bottom: 5rem;
+}
+
+.guide-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f8fafc;
+}
+
+/* Steps List */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-card {
+  display: flex;
+  gap: 2rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+.step-card:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  transform: translateX(8px);
+}
+
+.step-icon {
+  min-width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.step-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+}
+
+.step-content p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.step-content ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.step-content li {
+  color: #cbd5e1;
+  margin: 0.5rem 0;
+}
+
+.step-content a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.step-content a:hover {
+  text-decoration: underline;
+}
+
+.info-box {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #93c5fd;
+}
+
+/* Rules Grid */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.rule-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.rule-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #a78bfa;
+}
+
+/* Timeline */
+.gameplay-timeline {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.gameplay-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #8b5cf6, #ec4899);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -2.8rem;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  box-shadow: 0 4px 8px rgba(139, 92, 246, 0.4);
+}
+
+.timeline-content {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.timeline-content h3 {
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+/* Actions & Tips */
+.actions-grid, .tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.action-card, .tip-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.action-icon, .tip-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.action-card h3 {
+  color: #f8fafc;
+  margin-bottom: 0.75rem;
+}
+
+/* FHE Section */
+.fhe-section {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+.fhe-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fhe-content p {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.fhe-example {
+  margin: 2rem 0;
+}
+
+.fhe-example h4 {
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+.code-box {
+  background: #0f172a;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.code-box code {
+  font-family: 'JetBrains Mono', monospace;
+  color: #a78bfa;
+  font-size: 0.875rem;
+}
+
+.code-label {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.code-label.danger {
+  color: #ef4444;
+}
+
+.code-label.success {
+  color: #10b981;
+}
+
+.fhe-benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fhe-benefits li {
+  padding: 0.5rem 0;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.faq-item:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.faq-item summary {
+  font-weight: 600;
+  color: #f8fafc;
+  font-size: 1.125rem;
+  user-select: none;
+}
+
+.faq-item p {
+  margin-top: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.more-questions {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step-card {
+    flex-direction: column;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+}
+
