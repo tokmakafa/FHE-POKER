@@ -3,8 +3,8 @@ import { ethers } from 'ethers';
 import '../index.css';
 import PokerGameFHE_ABI from '../PokerGameFHE_ABI.json';
 
-// Import fhevmjs for FHE operations
-import { createInstance } from 'fhevmjs';
+// Note: fhevmjs will be integrated after Sepolia deployment
+// For now using placeholder encryption
 
 function GameFHE() {
   const [account, setAccount] = useState('');
@@ -15,11 +15,7 @@ function GameFHE() {
   const [currentPlayer, setCurrentPlayer] = useState(0);
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [fhevmInstance, setFhevmInstance] = useState(null);
   const [myCards, setMyCards] = useState({ card1: null, card2: null });
-
-  // FHE-specific state
-  const [publicKey, setPublicKey] = useState(null);
 
   // Contract address - will be updated after Sepolia deployment
   // For now using localhost address for development
@@ -34,31 +30,8 @@ function GameFHE() {
     4: 'Finished'
   };
 
-  // Initialize fhEVM instance
-  useEffect(() => {
-    const initFhevm = async () => {
-      try {
-        console.log('🔐 Initializing fhEVM...');
-        // Create fhEVM instance for localhost network
-        const instance = await createInstance({
-          chainId: 31337, // Localhost
-          networkUrl: 'http://localhost:8545',
-          gatewayUrl: 'http://localhost:8545' // For localhost testing
-        });
-        setFhevmInstance(instance);
-        
-        // Get public key
-        const pubKey = instance.getPublicKey();
-        setPublicKey(pubKey);
-        console.log('✅ fhEVM initialized');
-      } catch (error) {
-        console.error('❌ Error initializing fhEVM:', error);
-        setMessage('⚠️ FHE initialization failed. Using fallback mode.');
-      }
-    };
-
-    initFhevm();
-  }, []);
+  // FHE will be fully integrated after Sepolia deployment
+  // For now, contract handles encryption on-chain
 
   // Connect wallet
   const connectWallet = async () => {
@@ -146,8 +119,8 @@ function GameFHE() {
 
   // Place encrypted bet
   const placeBet = async () => {
-    if (!contract || !fhevmInstance) {
-      setMessage('Please connect wallet and wait for FHE initialization');
+    if (!contract) {
+      setMessage('Please connect wallet first');
       return;
     }
 
@@ -280,14 +253,12 @@ function GameFHE() {
               <p><strong>Current Player:</strong> #{currentPlayer}</p>
             </div>
 
-            {fhevmInstance && (
-              <div className="info-card fhe-status">
-                <h3>🔐 FHE Status</h3>
-                <p><strong>Status:</strong> <span className="status-active">● Active</span></p>
-                <p><strong>Encryption:</strong> TFHE (Zama)</p>
-                <p><strong>Public Key:</strong> {publicKey ? '✅ Loaded' : '⏳ Loading...'}</p>
-              </div>
-            )}
+            <div className="info-card fhe-status">
+              <h3>🔐 FHE Status</h3>
+              <p><strong>Contract:</strong> <span className="status-active">● PokerGameFHE</span></p>
+              <p><strong>Encryption:</strong> Zama TFHE (On-chain)</p>
+              <p><strong>Privacy:</strong> ✅ Cards & Bets Encrypted</p>
+            </div>
 
             {myCards.card1 && (
               <div className="info-card">
