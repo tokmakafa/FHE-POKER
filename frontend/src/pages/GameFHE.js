@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { ethers } from 'ethers';
 import '../index.css';
 import PokerGameFHE_ABI from '../PokerGameFHE_ABI.json';
-import contractInfo from '../contract-info.json';
 
 // Import fhevmjs for FHE operations
 import { createInstance } from 'fhevmjs';
@@ -22,7 +21,9 @@ function GameFHE() {
   // FHE-specific state
   const [publicKey, setPublicKey] = useState(null);
 
-  const CONTRACT_ADDRESS = contractInfo.address;
+  // Contract address - will be updated after Sepolia deployment
+  // For now using localhost address for development
+  const CONTRACT_ADDRESS = process.env.REACT_APP_CONTRACT_ADDRESS || '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 
   // Game states mapping
   const GAME_STATES = {
