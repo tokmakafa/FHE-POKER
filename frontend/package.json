@@ -6,12 +6,17 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
     "ethers": "^6.7.1",
     "fhevmjs": "^0.6.2",
+    "process": "^0.11.10",
     "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.9.4",
     "react-scripts": "5.0.1",
+    "stream-browserify": "^3.0.0",
     "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4"
   },
@@ -38,12 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "buffer": "^6.0.3",
-    "crypto-browserify": "^3.12.1",
-    "process": "^0.11.10",
-    "react-app-rewired": "^2.2.1",
-    "stream-browserify": "^3.0.0"
   }
 }
