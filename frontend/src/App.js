@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import HowToPlay from './pages/HowToPlay';
 import About from './pages/About';
 import Game from './pages/Game';
+import GameFHE from './pages/GameFHE';
 import './index.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/how-to-play" element={<HowToPlay />} />
             <Route path="/about" element={<About />} />
             <Route path="/game" element={<Game />} />
+            <Route path="/game-fhe" element={<GameFHE />} />
           </Routes>
         </main>
         

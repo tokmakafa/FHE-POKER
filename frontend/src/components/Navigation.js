@@ -53,10 +53,18 @@ function Navigation() {
           
           <Link 
             to="/game" 
-            className={`nav-link nav-cta ${isActive('/game')}`}
+            className={`nav-link ${isActive('/game')}`}
             onClick={() => setMobileMenuOpen(false)}
           >
-            🎮 Play Now
+            🎮 Play (Demo)
+          </Link>
+          
+          <Link 
+            to="/game-fhe" 
+            className={`nav-link nav-cta ${isActive('/game-fhe')}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            🔐 Play FHE (Zama)
           </Link>
         </div>
       </div>
